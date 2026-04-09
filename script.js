@@ -1,23 +1,33 @@
-// Efeito de mudar o fundo do header ao rolar a página
-window.addEventListener('scroll', function() {
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-        header.style.padding = "10px 0";
-    } else {
-        header.style.padding = "20px 0";
+// Função de Busca Simples
+function searchFunc() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase();
+        const text = card.querySelector('p').innerText.toLowerCase();
+        
+        if (title.includes(input) || text.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    if (input !== "") {
+        console.log("Usuário buscou por: " + input);
+        // Aqui poderia ser implementada uma chamada para API de dados agrários
+    }
+}
+
+// Permitir busca ao apertar "Enter"
+document.getElementById('searchInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        searchFunc();
     }
 });
 
-// Lógica básica para o menu mobile (pode ser expandida com CSS classes)
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-    // Aqui você pode alternar uma classe para mostrar/esconder o menu no mobile
-    alert('Menu mobile acionado! Implemente a classe active no CSS para expandir.');
-});
-
-// Smooth Scroll para links internos
+// Efeito de scroll suave para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
