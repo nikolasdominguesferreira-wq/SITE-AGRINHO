@@ -3,58 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte | Futuro Sustentável</title>
+    <title>AgroSustentável | Agricultura Familiar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header id="header">
+    <header>
         <nav class="container">
-            <div class="logo">Agro<span>Sustentável</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#pilares">Pilares</a></li>
-                <li><a href="#contato" class="btn">Contato</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
+            <div class="logo">
+                <i class="fas fa-seedling"></i> Agro<span>Forte</span>
             </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar agricultura familiar, manejo...">
+                <button onclick="searchFunc()"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Potencialidades</a></li>
+                <li><a href="#dados">Dados</a></li>
+                <li><a href="#contato" class="btn-contact">Participar</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Equilíbrio entre Produção e Meio Ambiente</h1>
-            <p>Inovação tecnológica a serviço da terra para alimentar o mundo sem comprometer o amanhã.</p>
-            <a href="#sobre" class="btn-primary">Saiba Mais</a>
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1>Agricultura Familiar: A Força que Alimenta o Futuro</h1>
+                <p>O equilíbrio perfeito entre a produção em escala e a conservação da biodiversidade.</p>
+                <a href="#info-cards" class="btn-main">Explorar Potencialidades</a>
+            </div>
         </div>
     </section>
 
-    <section id="pilares" class="container section">
-        <h2 class="text-center">Nossos Pilares</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-leaf"></i>
-                <h3>Preservação</h3>
-                <p>Manejo consciente e recuperação de áreas degradadas.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-microchip"></i>
-                <h3>Tecnologia</h3>
-                <p>Agricultura de precisão para reduzir desperdícios.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Produtividade</h3>
-                <p>Crescimento econômico aliado à responsabilidade social.</p>
-            </div>
+    <main class="container section" id="info-cards">
+        <div class="main-title">
+            <h2>Conheça as Potencialidades</h2>
+            <p>Informações baseadas em diretrizes da EMBRAPA e órgãos de desenvolvimento agrário.</p>
         </div>
-    </section>
+
+        <div class="grid">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=500&q=80" alt="Mãos segurando terra com broto">
+                <div class="card-content">
+                    <h3>Segurança Alimentar</h3>
+                    <p>A agricultura familiar é responsável por cerca de 70% dos alimentos consumidos no Brasil.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=500&q=80" alt="Plantação verdejante">
+                <div class="card-content">
+                    <h3>Sustentabilidade</h3>
+                    <p>Manejos como a agroecologia reduzem o uso de químicos e preservam lençóis freáticos.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=500&q=80" alt="Feira de produtos orgânicos">
+                <div class="card-content">
+                    <h3>Economia Local</h3>
+                    <p>Geração de renda e fixação do homem no campo através do cooperativismo forte.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+        </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Agro Forte Futuro Sustentável. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2026 AgroForte Sustentável. Referências: EMBRAPA / FAO Brasil.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
