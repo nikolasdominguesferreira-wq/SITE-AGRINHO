@@ -1,1 +1,128 @@
+:root {
+    --primary: #2d5a27;
+    --secondary: #8bc34a;
+    --dark: #1b3318;
+    --light: #f4f9f2;
+    --white: #ffffff;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+header {
+    background: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span { color: var(--secondary); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--dark);
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover { color: var(--secondary); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero-content h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
+
+/* Grid e Cards */
+.section { padding: 80px 0; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 30px;
+    background: var(--light);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); }
+.card i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
+
+/* Botões */
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background: var(--primary); }
+
+/* Responsividade */
+.menu-toggle { display: none; cursor: pointer; font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Simplicidade para o exemplo */
+    .menu-toggle { display: block; }
+    .hero-content h1 { font-size: 2rem; }
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
